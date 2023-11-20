@@ -425,6 +425,7 @@ static GstCaps* rosimagesrc_getcaps (GstBaseSrc * base_src, GstCaps * filter)
         "format", G_TYPE_STRING, format_str,
         "height", G_TYPE_INT, src->height,
         "width", G_TYPE_INT, src->width,
+        "pixel-aspect-ratio", GST_TYPE_FRACTION, 1, 1,
         NULL);
 
     gchar* caps_str = gst_caps_to_string(caps);
